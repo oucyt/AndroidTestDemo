@@ -1,13 +1,14 @@
 package cn.fortrun.androidtestdemo.test.groupshare;
 
-import com.chriszou.auttutorial.groupshare.CheckoutActivity;
-import com.chriszou.auttutorial.groupshare.DataLoadedEvent;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+
+import cn.fortrun.androidtestdemo.groupshare.CheckoutActivity;
+import cn.fortrun.androidtestdemo.groupshare.DataLoadedEvent;
 
 /**
  * Created by xiaochuang on 4/25/16.

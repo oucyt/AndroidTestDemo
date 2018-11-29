@@ -1,8 +1,9 @@
 package cn.fortrun.androidtestdemo.test.what;
 
-import com.chriszou.auttutorial.junit.Calculator;
 
 import org.junit.Test;
+
+import cn.fortrun.androidtestdemo.junit.Calculator;
 
 import static junit.framework.Assert.assertEquals;
 

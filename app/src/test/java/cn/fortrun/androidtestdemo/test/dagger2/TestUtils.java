@@ -1,11 +1,11 @@
 package cn.fortrun.androidtestdemo.test.dagger2;
 
-import com.chriszou.auttutorial.dagger2.AppComponent;
-import com.chriszou.auttutorial.dagger2.AppModule;
-import com.chriszou.auttutorial.dagger2.ComponentHolder;
-import com.chriszou.auttutorial.dagger2.DaggerAppComponent;
 
 import androidx.test.core.app.ApplicationProvider;
+import cn.fortrun.androidtestdemo.dagger2.AppComponent;
+import cn.fortrun.androidtestdemo.dagger2.AppModule;
+import cn.fortrun.androidtestdemo.dagger2.ComponentHolder;
+import cn.fortrun.androidtestdemo.dagger2.DaggerAppComponent;
 
 import static org.mockito.Mockito.spy;
 

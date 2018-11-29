@@ -3,11 +3,12 @@ package cn.fortrun.androidtestdemo.groupshare;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.chriszou.auttutorial.R;
 import com.squareup.otto.Bus;
 import com.squareup.otto.Subscribe;
 
 import javax.inject.Inject;
+
+import cn.fortrun.androidtestdemo.R;
 
 /**
  * Created by xiaochuang on 4/25/16.

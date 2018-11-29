@@ -1,7 +1,5 @@
 package cn.fortrun.androidtestdemo.async;
 
-import com.chriszou.auttutorial.RxTools;
-import com.chriszou.auttutorial.async.RepoModel.RepoCallback;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +10,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+import cn.fortrun.androidtestdemo.RxTools;
 import io.reactivex.functions.Consumer;
 
 import static junit.framework.Assert.assertEquals;
@@ -33,7 +32,7 @@ public class RepoModelTest {
         RepoModel model = new RepoModel();
         final List<Repo> result = new ArrayList<>();
         final CountDownLatch latch = new CountDownLatch(1);
-        model.loadRepos(new RepoCallback() {
+        model.loadRepos(new RepoModel.RepoCallback() {
             @Override
             public void onSuccess(List<Repo> repos) {
                 result.addAll(repos);

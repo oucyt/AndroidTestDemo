@@ -2,17 +2,17 @@ package cn.fortrun.androidtestdemo.test.dagger2;
 
 import android.content.SharedPreferences;
 
-import com.chriszou.auttutorial.dagger2.ComponentHolder;
-import com.chriszou.auttutorial.dagger2.LoginPresenter;
-import com.chriszou.auttutorial.dagger2.UserApiService;
-import com.chriszou.auttutorial.dagger2.UserManager;
-import com.chriszou.auttutorial.mockito.PasswordValidator;
-import com.chriszou.auttutorial.test.groupshare.JSpec;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.robolectric.RobolectricTestRunner;
+
+import cn.fortrun.androidtestdemo.dagger2.ComponentHolder;
+import cn.fortrun.androidtestdemo.dagger2.LoginPresenter;
+import cn.fortrun.androidtestdemo.dagger2.UserApiService;
+import cn.fortrun.androidtestdemo.dagger2.UserManager;
+import cn.fortrun.androidtestdemo.mockito.PasswordValidator;
+import cn.fortrun.androidtestdemo.test.groupshare.JSpec;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;

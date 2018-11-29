@@ -3,11 +3,11 @@ package cn.fortrun.androidtestdemo.dagger2;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.EditText;
 
-
 import javax.inject.Inject;
+
+import cn.fortrun.androidtestdemo.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
         ComponentHolder.getAppComponent().inject(this);
 
-        findViewById(R.id.login).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String username = ((EditText) findViewById(R.id.username)).getText().toString();

@@ -2,17 +2,17 @@ package cn.fortrun.androidtestdemo.test.dagger2;
 
 import android.widget.EditText;
 
-import com.chriszou.auttutorial.R;
-import com.chriszou.auttutorial.dagger2.LoginActivity;
-import com.chriszou.auttutorial.dagger2.LoginPresenter;
-import com.chriszou.auttutorial.dagger2.UserManager;
-import com.chriszou.auttutorial.mockito.PasswordValidator;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+
+import cn.fortrun.androidtestdemo.R;
+import cn.fortrun.androidtestdemo.dagger2.LoginActivity;
+import cn.fortrun.androidtestdemo.dagger2.LoginPresenter;
+import cn.fortrun.androidtestdemo.dagger2.UserManager;
+import cn.fortrun.androidtestdemo.mockito.PasswordValidator;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;

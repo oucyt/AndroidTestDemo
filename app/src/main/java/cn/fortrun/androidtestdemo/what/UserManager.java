@@ -1,6 +1,7 @@
 package cn.fortrun.androidtestdemo.what;
 
-import com.chriszou.auttutorial.groupshare.NetworkCallback;
+
+import cn.fortrun.androidtestdemo.groupshare.NetworkCallback;
 
 /**
  * Created by xiaochuang on 4/25/16.

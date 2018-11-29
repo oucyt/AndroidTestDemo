@@ -6,8 +6,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 
-import com.chriszou.auttutorial.R;
 import com.squareup.otto.Subscribe;
+
+import cn.fortrun.androidtestdemo.R;
 
 public class MainActivity extends AppCompatActivity {
     /**

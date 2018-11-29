@@ -2,13 +2,6 @@ package cn.fortrun.androidtestdemo.test.daggermock;
 
 import android.widget.EditText;
 
-import com.chriszou.auttutorial.R;
-import com.chriszou.auttutorial.dagger2.LoginPresenter;
-import com.chriszou.auttutorial.dagger2.UserManager;
-import com.chriszou.auttutorial.daggermock.LoginActivity;
-import com.chriszou.auttutorial.mockito.PasswordValidator;
-import com.chriszou.auttutorial.test.dagger2.TestUtils;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +9,13 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+
+import cn.fortrun.androidtestdemo.R;
+import cn.fortrun.androidtestdemo.dagger2.LoginActivity;
+import cn.fortrun.androidtestdemo.dagger2.LoginPresenter;
+import cn.fortrun.androidtestdemo.dagger2.UserManager;
+import cn.fortrun.androidtestdemo.mockito.PasswordValidator;
+import cn.fortrun.androidtestdemo.test.dagger2.TestUtils;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
@@ -30,13 +30,14 @@ public class LoginActivityTest {
     public DaggerRule daggerRule = new DaggerRule();
 
     /**
-     * 简写形式
+     * 通过DaggerRule,通过依赖注入的方式mock这个LoginPresenter
      */
     @Mock
     LoginPresenter loginPresenter;
 
     @Test
     public void testLogin_old_way() {
+        // 构造好Component，LoginActivity会调用它
         TestUtils.setupDagger();
         Mockito.when(TestUtils.appModule.provideLoginPresenter(any(UserManager.class), any(PasswordValidator.class)))
                 .thenReturn(loginPresenter);  //当mockAppModule的provideLoginPresenter()方法被调用时，让它返回mockLoginPresenter

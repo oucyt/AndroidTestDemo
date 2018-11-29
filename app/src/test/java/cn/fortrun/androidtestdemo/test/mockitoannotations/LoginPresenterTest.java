@@ -1,9 +1,5 @@
 package cn.fortrun.androidtestdemo.test.mockitoannotations;
 
-import com.chriszou.auttutorial.dagger2.UserManager;
-import com.chriszou.auttutorial.mockito.PasswordValidator;
-import com.chriszou.auttutorial.mockitoannotations.LoginPresenter;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -11,6 +7,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
+
+import cn.fortrun.androidtestdemo.dagger2.UserManager;
+import cn.fortrun.androidtestdemo.mockito.PasswordValidator;
+import cn.fortrun.androidtestdemo.mockitoannotations.LoginPresenter;
 
 import static org.mockito.Mockito.verify;
 

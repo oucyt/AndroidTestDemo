@@ -1,8 +1,5 @@
 package cn.fortrun.androidtestdemo.test.groupshare;
 
-import com.chriszou.auttutorial.groupshare.CheckoutModel;
-import com.chriszou.auttutorial.groupshare.NetworkCallback;
-import com.chriszou.auttutorial.groupshare.PaymentApi;
 import com.squareup.otto.Bus;
 
 import org.junit.Before;
@@ -12,6 +9,10 @@ import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 
 import java.util.HashMap;
+
+import cn.fortrun.androidtestdemo.groupshare.CheckoutModel;
+import cn.fortrun.androidtestdemo.groupshare.NetworkCallback;
+import cn.fortrun.androidtestdemo.groupshare.PaymentApi;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;

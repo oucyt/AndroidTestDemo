@@ -1,17 +1,17 @@
 package cn.fortrun.androidtestdemo.test.mockito;
 
-import com.chriszou.auttutorial.groupshare.NetworkCallback;
-import com.chriszou.auttutorial.mockito.LoginPresenter;
-import com.chriszou.auttutorial.mockito.PasswordValidator;
-import com.chriszou.auttutorial.test.groupshare.JSpec;
-import com.chriszou.auttutorial.what.UserManager;
-
 import junit.framework.Assert;
 
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
+
+import cn.fortrun.androidtestdemo.groupshare.NetworkCallback;
+import cn.fortrun.androidtestdemo.mockito.LoginPresenter;
+import cn.fortrun.androidtestdemo.mockito.PasswordValidator;
+import cn.fortrun.androidtestdemo.test.groupshare.JSpec;
+import cn.fortrun.androidtestdemo.what.UserManager;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;

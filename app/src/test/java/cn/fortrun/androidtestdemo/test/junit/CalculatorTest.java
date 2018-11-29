@@ -1,10 +1,11 @@
 package cn.fortrun.androidtestdemo.test.junit;
 
-import com.chriszou.auttutorial.junit.Calculator;
 
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import cn.fortrun.androidtestdemo.junit.Calculator;
 
 import static junit.framework.Assert.assertEquals;
 

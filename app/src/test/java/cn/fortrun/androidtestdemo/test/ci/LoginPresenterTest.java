@@ -1,10 +1,11 @@
 package cn.fortrun.androidtestdemo.test.ci;
 
-import com.chriszou.auttutorial.di.LoginPresenter;
-import com.chriszou.auttutorial.what.UserManager;
 
 import org.junit.Test;
 import org.mockito.Mockito;
+
+import cn.fortrun.androidtestdemo.di.LoginPresenter;
+import cn.fortrun.androidtestdemo.what.UserManager;
 
 /**
  * Created by xiaochuang on 5/7/16.

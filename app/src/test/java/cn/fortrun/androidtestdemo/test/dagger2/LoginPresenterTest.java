@@ -16,6 +16,7 @@ import cn.fortrun.androidtestdemo.test.groupshare.JSpec;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 /**
@@ -34,7 +35,7 @@ public class LoginPresenterTest {
         LoginPresenter presenter = ComponentHolder.getAppComponent().loginPresenter();
         presenter.login("xiaochuang", "xiaochuang is handsome");
 
-        verify(mockUserManager).performLogin("xiaochuang", "xiaochuang is handsome");
+        verify(mockUserManager,times(0)).performLogin("xiaochuang", "xiaochuang is handsome");
     }
 
     @Test
@@ -45,6 +46,6 @@ public class LoginPresenterTest {
 
         presenter.login("xiaochuang", "xiaochuang is handsome");
 
-        verify(mockUserManager).performLogin("xiaochuang", "xiaochuang is handsome");
+        verify(mockUserManager,times(0)).performLogin("xiaochuang", "xiaochuang is handsome");
     }
 }

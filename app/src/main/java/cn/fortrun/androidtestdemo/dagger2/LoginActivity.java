@@ -31,5 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
+    public void setLoginPresenter(LoginPresenter loginPresenter) {
+        mLoginPresenter = loginPresenter;
+    }
 }

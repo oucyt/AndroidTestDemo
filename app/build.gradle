@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "cn.fortrun.androidtestdemo"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -16,21 +16,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    testOptions {
-        unitTests {
-            includeAndroidResources = true
-        }
-        unitTests.all {
-            systemProperty 'robolectric.dependency.repo.url', 'http://maven.aliyun.com/nexus/content/groups/public/'
-            systemProperty 'robolectric.dependency.repo.id', 'alimaven'
-        }
-    }
     // Options for controlling unit tests execution.
     testOptions {
         unitTests {
             // Enables unit tests to use Android resources, assets, and manifests.
             includeAndroidResources = true
         }
+//        unitTests.all {
+//            systemProperty 'robolectric.dependency.repo.url', 'http://maven.aliyun.com/nexus/content/groups/public/'
+//            systemProperty 'robolectric.dependency.repo.id', 'alimaven'
+//        }
     }
 }
 

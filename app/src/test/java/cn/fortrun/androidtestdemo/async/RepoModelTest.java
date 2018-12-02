@@ -1,16 +1,15 @@
 package cn.fortrun.androidtestdemo.async;
 
 
+import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import cn.fortrun.androidtestdemo.RxTools;
+import cn.fortrun.androidtestdemo.rules.RxJava2Rule;
 import io.reactivex.functions.Consumer;
 
 import static junit.framework.Assert.assertEquals;
@@ -19,8 +18,10 @@ import static junit.framework.Assert.fail;
 /**
  * Created by xiaochuang on 8/7/16.
  */
-@RunWith(RobolectricTestRunner.class)
+//@RunWith(RobolectricTestRunner.class)
 public class RepoModelTest {
+    @Rule
+    public   RxJava2Rule sSchedulersOverrideRule = new RxJava2Rule();
 
     /**
      * https://stackoverflow.com/questions/24642049/android-testing-handler-postdelayed
@@ -51,19 +52,6 @@ public class RepoModelTest {
 
     @Test
     public void testLoadReposInRx() {
-//        RxJavaPlugins.getInstance().registerSchedulersHook(new RxJavaSchedulersHook() {
-//            @Override
-//            public Scheduler getIOScheduler() {
-//                return Schedulers.immediate();
-//            }
-//        });
-//        RxAndroidPlugins.getInstance().registerSchedulersHook(new RxAndroidSchedulersHook() {
-//            @Override
-//            public Scheduler getMainThreadScheduler() {
-//                return Schedulers.immediate();
-//            }
-//        });
-        RxTools.asyncToSync();
         RepoModel model = new RepoModel();
         final List<Repo> result = new ArrayList<>();
         model.loadRepos()

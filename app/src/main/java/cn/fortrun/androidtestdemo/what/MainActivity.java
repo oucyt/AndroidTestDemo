@@ -1,5 +1,6 @@
 package cn.fortrun.androidtestdemo.what;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import com.squareup.otto.Subscribe;
 
 import cn.fortrun.androidtestdemo.R;
+import cn.fortrun.androidtestdemo.dagger2.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
     /**
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private UserManager mUserManager = new UserManager();
 
+    public int i = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +28,11 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.login).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                login();
+//                login();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
+        i = 8;
     }
 
     public void login() {
@@ -37,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         mUserManager.performLogin(username, password);
     }
-   
+
     @Subscribe
     public void onLoginResult(LoginResult event) {
         //update UI accordingly
